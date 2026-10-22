@@ -69,12 +69,14 @@ a{color:var(--sea)}
 var G="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=";
 var DAYS=[
 {d:"11/10（二）",s:"抵達・高速公路北上",c:8000,i:[
+["09:00","🚐 從家裡出發","機場接送前往桃園機場，約 1 小時"],
+["11:40","✈️ JX870 起飛","辦理報到、出境"],
 ["14:15","✈️ 抵達那霸機場","JX870・入境、領行李（可先填 Visit Japan Web）","Naha Airport"],
 ["15:15","🚗 環球租車取車","確認兒童座椅類型與安裝，加租 ETC 卡"],
 ["16:30","🛣️ 上沖繩自動車道往名護","約 1 小時，過路費約 ¥1,900；中途休息一次"],
 ["18:15","🍔 晚餐：A&W 名護店","24 小時營業","A&W 名護店"],
 ["19:30","🏨 入住 CORAL ISLAND","請先告知飯店會晚到","27 Oura Nago Okinawa 905-2267"]]},
-{d:"11/11（三）",s:"水族館・古宇利島",c:33000,i:[
+{d:"11/11（三）",s:"水族館・古宇利島",c:31000,i:[
 ["08:00","🚗 從飯店出發","約 50–60 分鐘"],
 ["09:00","🐋 美麗海水族館","冬季 8:30–18:30，最後入場為閉館前 1 小時；1 歲免費、停車免費。鯨鯊餵食約 15:00／17:00（以官網為準）","沖縄美ら海水族館"],
 ["11:45","🍽️ 漁師食堂 大ばんぶる舞 本部店","營業時間待確認，出發前請查詢","漁師食堂 大ばんぶる舞 本部店"],
@@ -84,7 +86,7 @@ var DAYS=[
 ["17:00","🚗 返回名護","約 50 分鐘"],
 ["18:00","🥩 晚餐：潛水員牛排","營業時間待確認，建議先訂位","26.5947861,127.9594444"],
 ["19:30","🏨 回飯店休息","CORAL ISLAND"]]},
-{d:"11/12（四）",s:"海線南下・美國村日落",c:23000,i:[
+{d:"11/12（四）",s:"海線南下・美國村日落",c:20500,i:[
 ["09:30","🏨 退房，走 58 號線南下","約 50–60 分鐘"],
 ["10:45","🌊 萬座毛（選配）","步道平緩，可視體力略過","万座毛"],
 ["12:15","🛍️ 永旺夢樂城萊卡姆","午餐、休息、為寶寶換尿布","イオンモール沖縄ライカム"],
@@ -92,12 +94,12 @@ var DAYS=[
 ["16:30","🚗 前往美國村","約 40 分鐘","アメリカンビレッジ 北谷"],
 ["17:15","🌅 北谷日落海灘","日落約 17:45","サンセットビーチ 北谷"],
 ["18:15","🍽️ 美國村晚餐・逛街","20:00 左右返回那霸"]]},
-{d:"11/13（五）",s:"Outlet・瀨長島・還車",c:23500,i:[
+{d:"11/13（五）",s:"Outlet・瀨長島・還車",c:21500,i:[
 ["08:30","🍔 早餐：A&W 牧志店","營業時間待確認","A&W 牧志店"],
 ["09:30","🚗 前往 Ashibinaa Outlet","約 25 分鐘","あしびなー"],
 ["10:00","🛍️ 逛 Outlet","11/1 起先付含稅價，結帳帶護照，保留收據與 QR Code"],
 ["12:45","🥞 瀨長島・幸福鬆餅","11:00–21:00 不定休，建議先訂位 098-851-0009","幸せのパンケーキ ウミカジテラス 沖縄店"],
-["16:00","⛽ 加滿油","還車前先加油"],
+["16:00","⛽ 確認油量","訂單註明油錢贈送，還車前請向租車公司確認是否需加滿"],
 ["16:30","🚗 還車","17:00 前完成；環球租車","Naha Airport"],
 ["16:45","🚇 接駁到機場，轉單軌到縣廳前站","約 ¥300／人，再步行到飯店"],
 ["18:00","🍜 晚餐（待定）","沖繩麵或國際通附近","国際通 那覇"],
@@ -108,7 +110,9 @@ var DAYS=[
 ["11:15","🚕 計程車到機場","約 20–25 分鐘，¥2,000–2,500","Naha Airport"],
 ["12:00","🧾 退稅機台查驗","有退稅商品請先查驗，再託運行李"],
 ["12:30","🧳 辦理報到與託運","星宇航空櫃台"],
-["15:25","✈️ JX871 起飛","16:10 抵達桃園"]]}];
+["15:25","✈️ JX871 起飛","搭機返台"],
+["16:10","✈️ 抵達桃園機場","入境、領行李"],
+["17:00","🚐 機場接機回家","約 1 小時"]]}];
 var TR=[["機場 → 環球租車","租車接駁","約 10 分","免費"],["那霸 → 名護","自駕・高速公路","1–1.5 小時","過路費約 ¥1,900"],["名護 → 海洋博公園","自駕","50–60 分","油錢"],["海洋博 → 古宇利島","自駕","約 35 分","油錢"],["名護 → 萬座毛 → 萊卡姆 → 那霸","自駕（58 號線）","約 3 小時","油錢"],["那霸 → 美國村（往返）","自駕","各約 40 分","停車約 ¥500–1,000"],["那霸 → Outlet → 瀨長島","自駕","10–25 分","加油約 ¥2,000"],["機場 → 縣廳前站","單軌電車","約 15 分","約 ¥300／人"],["飯店 → 機場","計程車","20–25 分","¥2,000–2,500"]];
 var LODGE=[{n:"CORAL ISLAND",t:"11/10 – 11/12（2 晚）",a:"27 Oura, Nago, Okinawa 905-2267",m:"27 Oura Nago Okinawa 905-2267",x:"請先告知飯店 11/10 會晚到"},{n:"那霸國際大道艾貝斯特酒店",t:"11/12 – 11/14（2 晚）",a:"3 Chome-1-10 Kumoji, Naha, Okinawa 900-0015",m:"3 Chome-1-10 Kumoji Naha Okinawa 900-0015",x:"請確認停車場是否需預約，費用約 ¥1,000–1,500／晚"}];
 var CK=[["待辦預訂",["美麗海水族館電子票（1 歲免費，買 4 張成人票）","幸福鬆餅 11/13 訂位：098-851-0009","潛水員牛排 11/11 訂位","漁師食堂 本部店確認營業時間","租車：確認座椅類型、ETC 卡、還車時間","艾貝斯特：確認停車場","兩家飯店：告知 11/10 晚到","星宇：確認寶寶嬰兒票"]],
@@ -128,16 +132,22 @@ D.i.forEach(function(e){h+='<li><div class="tm">'+e[0]+'</div><h3>'+e[1]+'</h3>'
 return h+'</ul><div class="cost">今日預估　<b>'+y(D.c)+'</b></div>'}
 function vTr(){var h='<div class="hd"><h2>交通</h2><span>7 人座・1 位駕駛・已加訂兒童座椅</span></div><div class="card scr">';
 TR.forEach(function(r){h+='<div class="row"><span><b>'+r[0]+'</b><br>'+r[1]+'・'+r[2]+'</span><em>'+r[3]+'</em></div>'});
-return h+'</div><div class="note">🚗 靠左行駛，天黑後在北部道路放慢速度。還車前請加滿油。<br>🪪 台灣駕照需附日文譯本。</div>'}
+return h+'</div><div class="note">🚗 靠左行駛，天黑後在北部道路放慢速度。油錢贈送，還車前請向租車公司確認是否需加滿。<br>🪪 台灣駕照需附日文譯本。</div>'}
 function vHotel(){var h='<div class="hd"><h2>住宿</h2><span>2 間飯店・共 4 晚</span></div>';
 LODGE.forEach(function(L){h+='<div class="card"><h3>'+L.n+'</h3><p>'+L.t+'</p><p>'+L.a+'</p><p>'+L.x+'</p>'+goBtn(L.m)+'</div>'});
 return h+'<div class="card"><h3>航班</h3><div class="row"><span>去程 JX870　11/10</span><em>11:40 → 14:15</em></div><div class="row"><span>回程 JX871　11/14</span><em>15:25 → 16:10</em></div></div>'}
 function vPack(){var h='<div class="hd"><h2>行李與待辦</h2><span>點選即可勾掉，會記在這支手機上</span></div>';
 CK.forEach(function(g,gi){h+='<div class="card"><h3>'+g[0]+'</h3>';g[1].forEach(function(t,i){var k=gi+"-"+i;h+='<label class="ck'+(saved[k]?" done":"")+'"><input type="checkbox" '+(saved[k]?"checked":"")+' onchange="tg(\''+k+'\',this.checked)"><span>'+t+'</span></label>'});h+='</div>'});
 return h+'<div class="note">🧾 <b>退稅新制（11/1 起）</b>：購物先付含稅價，結帳出示護照並保留收據與 QR Code，離境前在機場機台完成查驗後才能退稅。</div>'}
-function vBud(){var tot=0,h='<div class="hd"><h2>預算</h2><span>不含機票、住宿、租車</span></div><div class="card">';
-DAYS.forEach(function(D,i){tot+=D.c;h+='<div style="margin:8px 0"><div class="row" style="border:0;padding:0"><span>Day '+(i+1)+'　'+D.s+'</span><em>'+y(D.c)+'</em></div><div class="bar"><i style="width:'+Math.round(D.c/330)+'%"></i></div></div>'});
-return h+'</div><div class="card"><p>合計（估算）</p><div class="tot">'+y(tot)+'</div><p>約 NT$'+Math.round(tot*0.2).toLocaleString("en-US")+'（以 ¥1 ≈ NT$0.2 概算）</p><p>購物另計，建議預留 ¥30,000–60,000</p></div>'}
+function vBud(){var R=0.2,tot=0,tt=0,n=function(x){return Math.round(x).toLocaleString("en-US")},h='<div class="hd"><h2>預算</h2><span>全程花費（含已預付）</span></div>';
+var pre=[["機票（4 位成人 × NT$10,000）",40000,0],["台灣機場接送（去回各 NT$1,500）",3000,0],["CORAL ISLAND 2 晚",34381,1],["艾貝斯特 2 晚",46736,1],["租車＋座椅（油錢贈送）",30000,1]];
+h+='<div class="card"><h3>已預付</h3>';
+pre.forEach(function(p){var v=p[2]?p[1]*R:p[1];tt+=v;h+='<div class="row"><span>'+p[0]+'</span><em>'+(p[2]?y(p[1])+'<br>':'')+'NT$'+n(v)+'</em></div>'});
+h+='<div class="row"><span><b>小計</b></span><em><b>NT$'+n(tt)+'</b></em></div></div><div class="card"><h3>當地花費（估算）</h3>';
+DAYS.forEach(function(D,i){tot+=D.c;h+='<div style="margin:8px 0"><div class="row" style="border:0;padding:0"><span>Day '+(i+1)+'　'+D.s+'</span><em>'+y(D.c)+'</em></div><div class="bar"><i style="width:'+Math.round(D.c/310)+'%"></i></div></div>'});
+h+='<div class="row"><span><b>小計</b></span><em><b>'+y(tot)+'</b><br>NT$'+n(tot*R)+'</em></div></div>';
+var g=tt+tot*R;
+return h+'<div class="card"><p>全程合計（估算）</p><div class="tot">NT$'+n(g)+'</div><p>4 位成人均分約 NT$'+n(g/4)+'（寶寶不計）</p><p>以 ¥1 ≈ NT$0.2 概算；購物另計，建議預留 ¥30,000–60,000</p></div>'}
 function tg(k,v){saved[k]=v;try{localStorage.setItem("okck",JSON.stringify(saved))}catch(e){}draw()}
 var NAV=[["📅","每日行程",vDay],["🚗","交通",vTr],["🏨","住宿",vHotel],["🧳","行李",vPack],["💴","預算",vBud]];
 function draw(){document.getElementById("app").innerHTML=NAV[tab][2]();
