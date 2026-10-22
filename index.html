@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>沖繩 5 天 4 夜</title>
+<style>
+:root{--bg:#f6efe2;--card:#fffaf1;--ink:#1c2b30;--sub:#5d6d70;--sea:#0b6272;--sea2:#0f8798;--coral:#e4573f;--line:#e3d6bd;--chip:#efe3cb;--ok:#2f8f5b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10191c;--card:#18262a;--ink:#eaf2f2;--sub:#9db1b4;--sea:#6cc6d3;--sea2:#4fb0bf;--coral:#ff8a72;--line:#2b3d42;--chip:#223338;--ok:#5fd093;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10191c;--card:#18262a;--ink:#eaf2f2;--sub:#9db1b4;--sea:#6cc6d3;--sea2:#4fb0bf;--coral:#ff8a72;--line:#2b3d42;--chip:#223338;--ok:#5fd093;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;padding-bottom:84px;-webkit-text-size-adjust:100%}
+header{background:linear-gradient(160deg,#0b6272,#16a0a8 70%,#f0b37a);color:#fff;padding:26px 20px 38px;position:relative;overflow:hidden}
+header h1{margin:0;font-size:28px;letter-spacing:.04em;font-weight:800}
+header p{margin:4px 0 0;opacity:.92;font-size:14px}
+header .fl{position:absolute;right:-8px;top:-6px;font-size:84px;opacity:.28;transform:rotate(14deg)}
+header svg{position:absolute;left:0;bottom:-1px;width:100%;height:22px}
+main{padding:0 14px;max-width:640px;margin:0 auto}
+.days{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 6px;scrollbar-width:none}
+.days::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:0;background:var(--chip);color:var(--ink);padding:8px 14px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer}
+.chip b{display:block;font-size:15px}
+.chip.on{background:var(--sea);color:#fff}
+:root[data-theme="dark"] .chip.on,:root:not([data-theme="light"]) .chip.on{color:#0b1c20}
+.hd{margin:10px 2px 14px}
+.hd h2{margin:0;font-size:21px}
+.hd span{color:var(--sub);font-size:14px}
+.tl{position:relative;margin:0;padding:0 0 0 18px;list-style:none;border-left:3px solid var(--line)}
+.tl li{position:relative;background:var(--card);border-radius:14px;padding:12px 14px;margin:0 0 12px 8px;box-shadow:0 1px 0 var(--line)}
+.tl li::before{content:"";position:absolute;left:-30px;top:18px;width:13px;height:13px;border-radius:50%;background:var(--coral);border:3px solid var(--bg)}
+.tm{font-weight:800;color:var(--coral);font-size:14px}
+.tl h3{margin:0;font-size:17px}
+.tl p{margin:3px 0 0;color:var(--sub);font-size:14px}
+.go{display:inline-block;margin-top:9px;background:var(--sea);color:#fff;text-decoration:none;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:700}
+:root[data-theme="dark"] .go,:root:not([data-theme="light"]) .go{color:#0b1c20}
+.cost{margin:4px 0 16px 8px;text-align:right;color:var(--sub);font-size:14px}
+.cost b{color:var(--ink);font-size:17px}
+.card{background:var(--card);border-radius:14px;padding:14px;margin:12px 0}
+.card h3{margin:0 0 4px;font-size:17px}
+.card p{margin:2px 0;color:var(--sub);font-size:14px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.row:last-child{border:0}
+.row span:first-child{flex:1}
+.row em{font-style:normal;color:var(--sub);text-align:right}
+.scr{overflow-x:auto}
+.bar{height:8px;border-radius:6px;background:var(--chip);margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--sea2),var(--coral))}
+.tot{font-size:28px;font-weight:800;color:var(--coral)}
+.ck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:15px;cursor:pointer}
+.ck input{width:20px;height:20px;margin-top:3px;accent-color:var(--sea2)}
+.ck.done span{text-decoration:line-through;color:var(--sub)}
+.note{background:var(--chip);border-radius:12px;padding:10px 12px;font-size:14px;margin:10px 0}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+nav button{flex:1;border:0;background:none;color:var(--sub);font:inherit;font-size:12px;padding:8px 0 7px;cursor:pointer}
+nav button span{display:block;font-size:22px;line-height:1.2}
+nav button.on{color:var(--sea);font-weight:700}
+a{color:var(--sea)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+</style>
+</head>
+<body>
+<header><div class="fl">🌺</div><h1>沖繩 5 天 4 夜</h1><p>2026/11/10（二）– 11/14（六）・5 人・自駕</p>
+<svg viewBox="0 0 400 22" preserveAspectRatio="none"><path d="M0 12 Q25 0 50 12 T100 12 T150 12 T200 12 T250 12 T300 12 T350 12 T400 12 V22 H0Z" fill="var(--bg)"/></svg></header>
+<main id="app"></main>
+<nav id="nav"></nav>
+<script>
+var G="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=";
+var DAYS=[
+{d:"11/10（二）",s:"抵達・高速公路北上",c:8000,i:[
+["14:15","✈️ 抵達那霸機場","JX870・入境、領行李（可先填 Visit Japan Web）","Naha Airport"],
+["15:15","🚗 環球租車取車","確認兒童座椅類型與安裝，加租 ETC 卡"],
+["16:30","🛣️ 上沖繩自動車道往名護","約 1 小時，過路費約 ¥1,900；中途休息一次"],
+["18:15","🍔 晚餐：A&W 名護店","24 小時營業","A&W 名護店"],
+["19:30","🏨 入住 CORAL ISLAND","請先告知飯店會晚到","27 Oura Nago Okinawa 905-2267"]]},
+{d:"11/11（三）",s:"水族館・古宇利島",c:33000,i:[
+["08:00","🚗 從飯店出發","約 50–60 分鐘"],
+["09:00","🐋 美麗海水族館","冬季 8:30–18:30，最後入場為閉館前 1 小時；1 歲免費、停車免費。鯨鯊餵食約 15:00／17:00（以官網為準）","沖縄美ら海水族館"],
+["11:45","🍽️ 漁師食堂 大ばんぶる舞 本部店","營業時間待確認，出發前請查詢","漁師食堂 大ばんぶる舞 本部店"],
+["13:15","🚗 前往古宇利島","約 25 分鐘，可安排寶寶午睡"],
+["14:00","🌉 古宇利大橋・愛心岩","11 月海水偏涼，以散步看海為主","古宇利大橋"],
+["15:30","🗼 古宇利海洋塔","有電梯與座位，適合長輩","古宇利オーシャンタワー"],
+["17:00","🚗 返回名護","約 50 分鐘"],
+["18:00","🥩 晚餐：潛水員牛排","營業時間待確認，建議先訂位","26.5947861,127.9594444"],
+["19:30","🏨 回飯店休息","CORAL ISLAND"]]},
+{d:"11/12（四）",s:"海線南下・美國村日落",c:23000,i:[
+["09:30","🏨 退房，走 58 號線南下","約 50–60 分鐘"],
+["10:45","🌊 萬座毛（選配）","步道平緩，可視體力略過","万座毛"],
+["12:15","🛍️ 永旺夢樂城萊卡姆","午餐、休息、為寶寶換尿布","イオンモール沖縄ライカム"],
+["15:30","🏨 入住艾貝斯特","久茂地 3-1-10；放行李、休息，請確認停車場","3 Chome-1-10 Kumoji Naha Okinawa 900-0015"],
+["16:30","🚗 前往美國村","約 40 分鐘","アメリカンビレッジ 北谷"],
+["17:15","🌅 北谷日落海灘","日落約 17:45","サンセットビーチ 北谷"],
+["18:15","🍽️ 美國村晚餐・逛街","20:00 左右返回那霸"]]},
+{d:"11/13（五）",s:"Outlet・瀨長島・還車",c:23500,i:[
+["08:30","🍔 早餐：A&W 牧志店","營業時間待確認","A&W 牧志店"],
+["09:30","🚗 前往 Ashibinaa Outlet","約 25 分鐘","あしびなー"],
+["10:00","🛍️ 逛 Outlet","11/1 起先付含稅價，結帳帶護照，保留收據與 QR Code"],
+["12:45","🥞 瀨長島・幸福鬆餅","11:00–21:00 不定休，建議先訂位 098-851-0009","幸せのパンケーキ ウミカジテラス 沖縄店"],
+["16:00","⛽ 加滿油","還車前先加油"],
+["16:30","🚗 還車","17:00 前完成；環球租車","Naha Airport"],
+["16:45","🚇 接駁到機場，轉單軌到縣廳前站","約 ¥300／人，再步行到飯店"],
+["18:00","🍜 晚餐（待定）","沖繩麵或國際通附近","国際通 那覇"],
+["20:00","🏨 回飯店","寶寶早點睡"]]},
+{d:"11/14（六）",s:"採買・返程",c:21000,i:[
+["09:00","🎁 國際通・牧志公設市場","多數店家約 10:00 後營業","牧志公設市場"],
+["11:00","🏨 退房",""],
+["11:15","🚕 計程車到機場","約 20–25 分鐘，¥2,000–2,500","Naha Airport"],
+["12:00","🧾 退稅機台查驗","有退稅商品請先查驗，再託運行李"],
+["12:30","🧳 辦理報到與託運","星宇航空櫃台"],
+["15:25","✈️ JX871 起飛","16:10 抵達桃園"]]}];
+var TR=[["機場 → 環球租車","租車接駁","約 10 分","免費"],["那霸 → 名護","自駕・高速公路","1–1.5 小時","過路費約 ¥1,900"],["名護 → 海洋博公園","自駕","50–60 分","油錢"],["海洋博 → 古宇利島","自駕","約 35 分","油錢"],["名護 → 萬座毛 → 萊卡姆 → 那霸","自駕（58 號線）","約 3 小時","油錢"],["那霸 → 美國村（往返）","自駕","各約 40 分","停車約 ¥500–1,000"],["那霸 → Outlet → 瀨長島","自駕","10–25 分","加油約 ¥2,000"],["機場 → 縣廳前站","單軌電車","約 15 分","約 ¥300／人"],["飯店 → 機場","計程車","20–25 分","¥2,000–2,500"]];
+var LODGE=[{n:"CORAL ISLAND",t:"11/10 – 11/12（2 晚）",a:"27 Oura, Nago, Okinawa 905-2267",m:"27 Oura Nago Okinawa 905-2267",x:"請先告知飯店 11/10 會晚到"},{n:"那霸國際大道艾貝斯特酒店",t:"11/12 – 11/14（2 晚）",a:"3 Chome-1-10 Kumoji, Naha, Okinawa 900-0015",m:"3 Chome-1-10 Kumoji Naha Okinawa 900-0015",x:"請確認停車場是否需預約，費用約 ¥1,000–1,500／晚"}];
+var CK=[["待辦預訂",["美麗海水族館電子票（1 歲免費，買 4 張成人票）","幸福鬆餅 11/13 訂位：098-851-0009","潛水員牛排 11/11 訂位","漁師食堂 本部店確認營業時間","租車：確認座椅類型、ETC 卡、還車時間","艾貝斯特：確認停車場","兩家飯店：告知 11/10 晚到","星宇：確認寶寶嬰兒票"]],
+["證件・金錢",["護照（含寶寶）","台灣駕照＋日文譯本","信用卡、日幣現金","旅平險與不便險資料","機票、飯店、租車訂單截圖"]],
+["電子用品",["eSIM／網卡","行動電源（確認星宇規定）","車用手機架、充電線","Visit Japan Web 截圖"]],
+["寶寶",["輕便推車","尿布、濕紙巾","副食品／奶粉","兒童餐具","常備藥","安撫玩具、換洗衣物"]],
+["衣物・長輩",["薄外套（水族館冷氣強、晚上較涼）","防滑好走的鞋","防曬帽、雨具","長輩常備藥","折疊購物袋"]]];
+var tab=0,day=0,saved={};
+try{saved=JSON.parse(localStorage.getItem("okck")||"{}")}catch(e){}
+(function(){var t=new Date(2026,10,10),n=new Date(),k=Math.round((new Date(n.getFullYear(),n.getMonth(),n.getDate())-t)/864e5);if(k>=0&&k<5)day=k})();
+function y(n){return "¥"+n.toLocaleString("en-US")}
+function goBtn(q){return q?'<a class="go" target="_blank" rel="noopener" href="'+G+encodeURIComponent(q)+'">📍 開啟導航</a>':""}
+function vDay(){var D=DAYS[day],h='<div class="days">';
+DAYS.forEach(function(x,i){h+='<button class="chip'+(i==day?" on":"")+'" onclick="day='+i+';draw()"><b>Day '+(i+1)+'</b>'+x.d.slice(0,5)+'</button>'});
+h+='</div><div class="hd"><h2>'+D.d+'</h2><span>'+D.s+'</span></div><ul class="tl">';
+D.i.forEach(function(e){h+='<li><div class="tm">'+e[0]+'</div><h3>'+e[1]+'</h3>'+(e[2]?'<p>'+e[2]+'</p>':'')+goBtn(e[3])+'</li>'});
+return h+'</ul><div class="cost">今日預估　<b>'+y(D.c)+'</b></div>'}
+function vTr(){var h='<div class="hd"><h2>交通</h2><span>7 人座・1 位駕駛・已加訂兒童座椅</span></div><div class="card scr">';
+TR.forEach(function(r){h+='<div class="row"><span><b>'+r[0]+'</b><br>'+r[1]+'・'+r[2]+'</span><em>'+r[3]+'</em></div>'});
+return h+'</div><div class="note">🚗 靠左行駛，天黑後在北部道路放慢速度。還車前請加滿油。<br>🪪 台灣駕照需附日文譯本。</div>'}
+function vHotel(){var h='<div class="hd"><h2>住宿</h2><span>2 間飯店・共 4 晚</span></div>';
+LODGE.forEach(function(L){h+='<div class="card"><h3>'+L.n+'</h3><p>'+L.t+'</p><p>'+L.a+'</p><p>'+L.x+'</p>'+goBtn(L.m)+'</div>'});
+return h+'<div class="card"><h3>航班</h3><div class="row"><span>去程 JX870　11/10</span><em>11:40 → 14:15</em></div><div class="row"><span>回程 JX871　11/14</span><em>15:25 → 16:10</em></div></div>'}
+function vPack(){var h='<div class="hd"><h2>行李與待辦</h2><span>點選即可勾掉，會記在這支手機上</span></div>';
+CK.forEach(function(g,gi){h+='<div class="card"><h3>'+g[0]+'</h3>';g[1].forEach(function(t,i){var k=gi+"-"+i;h+='<label class="ck'+(saved[k]?" done":"")+'"><input type="checkbox" '+(saved[k]?"checked":"")+' onchange="tg(\''+k+'\',this.checked)"><span>'+t+'</span></label>'});h+='</div>'});
+return h+'<div class="note">🧾 <b>退稅新制（11/1 起）</b>：購物先付含稅價，結帳出示護照並保留收據與 QR Code，離境前在機場機台完成查驗後才能退稅。</div>'}
+function vBud(){var tot=0,h='<div class="hd"><h2>預算</h2><span>不含機票、住宿、租車</span></div><div class="card">';
+DAYS.forEach(function(D,i){tot+=D.c;h+='<div style="margin:8px 0"><div class="row" style="border:0;padding:0"><span>Day '+(i+1)+'　'+D.s+'</span><em>'+y(D.c)+'</em></div><div class="bar"><i style="width:'+Math.round(D.c/330)+'%"></i></div></div>'});
+return h+'</div><div class="card"><p>合計（估算）</p><div class="tot">'+y(tot)+'</div><p>約 NT$'+Math.round(tot*0.2).toLocaleString("en-US")+'（以 ¥1 ≈ NT$0.2 概算）</p><p>購物另計，建議預留 ¥30,000–60,000</p></div>'}
+function tg(k,v){saved[k]=v;try{localStorage.setItem("okck",JSON.stringify(saved))}catch(e){}draw()}
+var NAV=[["📅","每日行程",vDay],["🚗","交通",vTr],["🏨","住宿",vHotel],["🧳","行李",vPack],["💴","預算",vBud]];
+function draw(){document.getElementById("app").innerHTML=NAV[tab][2]();
+document.getElementById("nav").innerHTML=NAV.map(function(n,i){return '<button class="'+(i==tab?"on":"")+'" onclick="tab='+i+';draw();scrollTo(0,0)"><span>'+n[0]+'</span>'+n[1]+'</button>'}).join("")}
+draw();
+</script>
+</body>
+</html>
