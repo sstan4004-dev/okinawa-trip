@@ -67,18 +67,24 @@ h2.st{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:400;mar
 .bar i{display:block;height:100%;background:var(--c)}
 .tot{font-size:28px}
 .fl{transform-box:fill-box;transform-origin:center;animation:fl 4s ease-in-out infinite}
-.pl{animation:dr 16s linear infinite}
-.cl{animation:dr 38s linear infinite}
 .wv{animation:wv 5s ease-in-out infinite}
-.car{offset-path:path("M118 114Q190 84 272 114");offset-rotate:0deg;animation:rd 9s ease-in-out infinite alternate}
 .spin{transform-box:fill-box;transform-origin:center;animation:sp 9s ease-in-out infinite}
 @keyframes fl{50%{transform:translateY(-6px)}}
-@keyframes dr{from{transform:translateX(-80px)}to{transform:translateX(420px)}}
 @keyframes wv{50%{transform:translateX(-12px)}}
-@keyframes rd{from{offset-distance:2%}to{offset-distance:98%}}
 @keyframes sp{50%{transform:rotate(14deg)}}
 @keyframes pop{0%{opacity:0;transform:translateY(18px) scale(.9)}100%{opacity:1;transform:none}}
 @keyframes bump{0%{transform:scale(.85)}100%{transform:scale(1)}}
+.swim{animation:sw 11s linear infinite}
+.swim2{animation:sw 15s linear infinite;animation-delay:-6s}
+.shark{animation:sw 26s linear infinite;animation-delay:-9s}
+.sway{transform-origin:50px 72px;animation:sway 4.5s ease-in-out infinite}
+.crab{animation:cr 3.2s ease-in-out infinite alternate}
+.bub{animation:bu 5s ease-in infinite}
+@keyframes sw{0%{transform:translateX(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateX(250px);opacity:0}}
+@keyframes sway{50%{transform:rotate(5deg)}}
+@keyframes cr{from{transform:translateX(-14px)}to{transform:translateX(16px)}}
+@keyframes bu{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(-52px);opacity:0}}
+.fl2 small{display:block;font-size:12px}
 @media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 :focus-visible{outline:3px solid var(--k);outline-offset:3px}
 </style>
@@ -88,24 +94,25 @@ h2.st{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:400;mar
 <nav class="top" id="nav"></nav>
 <main id="main">
 <section id="top" class="hero">
-<svg class="art" viewBox="0 0 360 180" role="img" aria-label="沖繩海邊插畫：太陽、古宇利大橋、首里城風城堡與飛機">
-<g class="fl"><circle cx="292" cy="44" r="22" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/></g>
-<g class="cl" fill="#A8D3E6"><circle cx="40" cy="40" r="11"/><circle cx="56" cy="34" r="14"/><circle cx="74" cy="41" r="10"/><rect x="30" y="40" width="54" height="11" rx="5"/></g>
-<g class="pl"><ellipse cx="20" cy="70" rx="18" ry="6" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/><path d="M16 70L8 52L26 68z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><path d="M34 67L41 58L41 69z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></g>
-<rect y="120" width="360" height="60" fill="#A8D3E6"/><path d="M0 120H360" stroke="#3E3A39" stroke-width="3"/>
-<g class="wv"><path d="M-12 146q15-9 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0" fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/></g>
-<path d="M-6 126Q30 98 76 108Q112 114 124 126V134H-6z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
-<rect x="36" y="82" width="46" height="26" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/><path d="M28 84L59 58L90 84z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><rect x="53" y="92" width="12" height="16" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
-<path d="M262 128Q280 104 312 118Q336 122 350 128V136H262z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
-<path d="M118 124Q190 94 272 124" fill="none" stroke="#3E3A39" stroke-width="4"/><path d="M150 110V138M190 106V138M230 110V138" stroke="#3E3A39" stroke-width="3"/>
-<g class="car"><rect x="-11" y="-14" width="22" height="11" rx="4" fill="#F6D27A" stroke="#3E3A39" stroke-width="2.5"/><circle cx="-5" cy="-2" r="3" fill="#3E3A39"/><circle cx="5" cy="-2" r="3" fill="#3E3A39"/></g>
-<use class="spin" href="#hib" x="298" y="132" width="52" height="52"/>
+<svg class="art" viewBox="0 0 360 180" role="img" aria-label="沖繩海邊插畫：太陽、沙灘椰子樹、螃蟹、魚群與鯨鯊">
+<g class="fl"><circle cx="300" cy="40" r="20" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/></g>
+<rect y="96" width="360" height="84" fill="#A8D3E6"/><path d="M0 96H360" stroke="#3E3A39" stroke-width="3"/>
+<g class="wv"><path d="M-12 112q15-8 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0" fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/></g>
+<g transform="translate(166 136)"><g class="shark"><ellipse rx="36" ry="11" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/><path d="M-34 0L-52 -12L-47 0L-52 12z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><path d="M-4 -10L4 -21L10 -10z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><g fill="#A8D3E6"><circle cx="-18" cy="3" r="2.2"/><circle cx="-8" cy="-3" r="2.2"/><circle cx="2" cy="3" r="2.2"/><circle cx="12" cy="-3" r="2.2"/><circle cx="20" cy="3" r="2.2"/></g><circle cx="29" cy="-2" r="2" fill="#3E3A39"/></g></g>
+<g transform="translate(170 158)"><g class="swim"><ellipse rx="13" ry="8" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/><path d="M-12 0L-23 -7L-23 7z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><circle cx="6" cy="-2" r="1.8" fill="#3E3A39"/></g></g>
+<g transform="translate(176 120) scale(.8)"><g class="swim2"><ellipse rx="13" ry="8" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/><path d="M-12 0L-23 -7L-23 7z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><circle cx="6" cy="-2" r="1.8" fill="#3E3A39"/></g></g>
+<g fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"><circle class="bub" cx="236" cy="172" r="4"/><circle class="bub" style="animation-delay:-1.8s" cx="248" cy="176" r="3"/><circle class="bub" style="animation-delay:-3.4s" cx="226" cy="178" r="3"/></g>
+<path d="M-6 180V134Q30 118 72 128Q112 136 140 160Q150 170 160 180Z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+<path d="M52 132Q62 100 50 72" fill="none" stroke="#3E3A39" stroke-width="4" stroke-linecap="round"/>
+<g class="sway" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3"><ellipse cx="32" cy="68" rx="18" ry="7" transform="rotate(-20 32 68)"/><ellipse cx="68" cy="68" rx="18" ry="7" transform="rotate(20 68 68)"/><ellipse cx="38" cy="54" rx="16" ry="6" transform="rotate(-55 38 54)"/><ellipse cx="62" cy="54" rx="16" ry="6" transform="rotate(55 62 54)"/><circle cx="50" cy="76" r="4" fill="#F2A497"/></g>
+<g transform="translate(98 152)"><g class="crab"><path d="M-11 2l-7 4M-11 6l-6 5M11 2l7 4M11 6l6 5" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M-4 -6v-5M4 -6v-5" stroke="#3E3A39" stroke-width="2.5" stroke-linecap="round"/><ellipse rx="11" ry="7" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/><circle cx="-15" cy="-7" r="4.5" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/><circle cx="15" cy="-7" r="4.5" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/></g></g>
+<use class="spin" href="#hib" x="306" y="128" width="48" height="48"/>
 </svg>
 <div class="in"><h1>沖繩 5 天 4 夜</h1><p>2026/11/10（二）– 11/14（六）・5 人・自駕</p><div class="cd" id="cd"></div><div class="wxs" id="wx"></div></div>
 </section>
 <section id="fl"><h2 class="st"><svg class="hb"><use href="#hib"/></svg>航班</h2><div class="fls">
-<div class="card"><span class="lb">去程　11/10（二）</span><div class="fl2"><div><b>11:40</b>桃園 TPE</div><div>✈️<br>JX870</div><div><b>14:15</b>那霸 OKA</div></div><p style="text-align:center">星宇航空 STARLUX</p></div>
-<div class="card"><span class="lb" style="background:var(--g)">回程　11/14（六）</span><div class="fl2"><div><b>15:25</b>那霸 OKA</div><div>✈️<br>JX871</div><div><b>16:10</b>桃園 TPE</div></div><p style="text-align:center">星宇航空 STARLUX</p></div>
+<div class="card"><span class="lb">去程　11/10（二）</span><div class="fl2"><div><b>11:40</b>桃園 TPE<small>T1（待確認）</small></div><div>✈️<br>JX870</div><div><b>14:15</b>那霸 OKA<small>國際線航廈</small></div></div><p style="text-align:center">星宇航空 STARLUX</p></div>
+<div class="card"><span class="lb" style="background:var(--g)">回程　11/14（六）</span><div class="fl2"><div><b>15:25</b>那霸 OKA<small>國際線航廈</small></div><div>✈️<br>JX871</div><div><b>16:10</b>桃園 TPE<small>航廈待確認</small></div></div><p style="text-align:center">星宇航空 STARLUX</p></div>
 </div></section>
 <section id="it"><h2 class="st"><svg class="hb"><use href="#hib"/></svg>每日行程</h2><div class="days" id="days"></div><div id="dc"></div></section>
 <section id="td"><h2 class="st"><svg class="hb"><use href="#hib"/></svg>待辦與行李</h2><div id="tdc"></div></section>
@@ -144,9 +151,10 @@ var DAYS=[
 ["17:15","🌅 北谷日落海灘","日落約 17:45","サンセットビーチ 北谷"],
 ["18:15","🍽️ 美國村晚餐・逛街","20:00 左右返回那霸"]]},
 {d:"11/13（五）",s:"Outlet・瀨長島・還車",i:[
-["08:30","🍔 早餐：A&W 牧志店","營業時間待確認","A&W 牧志店"],
-["09:30","🚗 前往 Ashibinaa Outlet","約 25 分鐘","あしびなー"],
-["10:00","🛍️ 逛 Outlet","11/1 起先付含稅價，結帳帶護照，保留收據與 QR Code"],
+["08:15","🚗 從飯店出發","前往牧港，約 20 分鐘"],
+["08:30","🍔 早餐：A&W 牧港店","營業時間待確認","A&W 牧港店"],
+["09:30","🚗 前往 Ashibinaa Outlet","約 30 分鐘","あしびなー"],
+["10:15","🛍️ 逛 Outlet","11/1 起先付含稅價，結帳帶護照，保留收據與 QR Code"],
 ["12:45","🥞 瀨長島・幸福鬆餅","11:00–21:00 不定休，建議先訂位 098-851-0009","幸せのパンケーキ ウミカジテラス 沖縄店"],
 ["16:00","⛽ 確認油量","訂單註明油錢贈送，還車前請向租車公司確認是否需加滿"],
 ["16:30","🚗 還車","ユニバースレンタカー那覇空港店，17:00 前完成","518-1 Iraha Tomigusuku Okinawa 901-0232"],
